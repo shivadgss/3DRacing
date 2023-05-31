@@ -52,7 +52,7 @@ public class CarController : MonoBehaviour
         }
         else if (currentSpeed > initialSpeed)
         {
-            currentSpeed -= deceleration * Time.deltaTime;
+            currentSpeed -= deceleration;
             currentSpeed = Mathf.Max(currentSpeed, initialSpeed);
         }
 
