@@ -47,12 +47,12 @@ public class CarController : MonoBehaviour
         // Update the speed based on acceleration or deceleration
         if (isAccelerating)
         {
-            currentSpeed += acceleration * Time.deltaTime;
+            currentSpeed += acceleration * Time.deltaTime*3f;
             currentSpeed = Mathf.Clamp(currentSpeed, 0f, maxSpeed);
         }
         else if (currentSpeed > initialSpeed)
         {
-            currentSpeed -= deceleration;
+            currentSpeed -= deceleration*8f*Time.deltaTime;
             currentSpeed = Mathf.Max(currentSpeed, initialSpeed);
         }
 
